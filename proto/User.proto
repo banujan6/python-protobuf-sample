@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message User {
+
+    message Name {
+        string firstName = 1;
+        string lastName = 2;
+    };
+
+    int32 id = 1;
+    string username = 2;
+    repeated Name name = 3;
+    string email = 4;
+}
+
+message UserRecords {
+    repeated User users = 1;
+}
